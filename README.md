@@ -1,16 +1,15 @@
 # Stadia Flash Tool (C Port)
 
-A command-line tool for flashing firmware on Google Stadia controllers, written entirely in C. This is a port of the Python/JavaScript tools, designed for native execution and better maintainability.
+A command-line tool for flashing firmware on Google Stadia controllers
 
 ## Features
 
-- **No Python runtime required**: Compiles to a single native binary.
 - **Dynamic HID Parsing**: Automatically queries and parses USB HID report descriptors to configure payload sizes exactly as the device expects.
 - **Cross-Platform Potential**: Relies on standard libraries (`libusb` and `hidapi`).
 
 ## Dependencies
 
-To compile this tool, you need `make`, a C compiler (like `gcc`), and the development headers for `libusb-1.0` and `hidapi`.
+To compile this tool, you need `make`, a C compiler (like `clang`), and the development headers for `libusb-1.0` and `hidapi`.
 
 On Debian/Ubuntu:
 ```bash
@@ -46,7 +45,3 @@ Options:
   --assets-dir     Path to directory containing flashloader/probe assets (default: ./data)
   -y, --yes        Don't prompt for confirmation (for flash-firmware/auto)
 ```
-
-## Data Assets
-
-For the tool to function, you need the original Stadia `.bin` firmware files and the flashloader binaries. By default, the tool expects these to be placed in a `./data/` directory relative to where you run the tool.
