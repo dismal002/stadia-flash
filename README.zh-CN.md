@@ -1,10 +1,9 @@
 # Stadia Flash Tool (C 语言移植版)
 
-这是一个用 C 语言编写的用于刷写 Google Stadia 手柄固件的命令行工具。它是 Python/JavaScript 工具的 C 语言原生移植版本，旨在提供原生执行性能和更好的代码可维护性。
+这是一个用 C 语言编写的用于刷写 Google Stadia 手柄固件的命令行工具。
 
 ## 功能特性
 
-- **无需 Python 环境**：编译为单个原生二进制文件即可运行。
 - **动态 HID 解析**：自动查询并解析 USB HID 报告描述符，完全按照设备预期配置数据包大小。
 - **跨平台潜力**：依赖标准跨平台库 (`libusb` 和 `hidapi`)。
 
@@ -47,6 +46,3 @@ Options:
   -y, --yes        跳过确认提示 (适用于 flash-firmware/auto)
 ```
 
-## 数据资源
-
-工具正常运行需要原版的 Stadia `.bin` 固件文件和 flashloader 二进制文件。默认情况下，工具会期望这些文件存放在运行目录下的 `./data/` 文件夹中。
